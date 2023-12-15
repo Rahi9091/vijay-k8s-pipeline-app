@@ -1,15 +1,15 @@
 version: '3.8' 
 services: # apps containers you want to build and run
   ashuapp1: # name of appliction for compose 
-    image: ashudotnetimg:v1  # image i want to build 
+    image: vijaydotnetimg:v1  # image i want to build 
     build: .  # path of dockerfile location -- . means current 
-    container_name: ashuc1 # it will create container also 
+    container_name: vijaycnt1 # it will create container also 
   ashuapp2: 
-    image: ashuhttpd:v1 
+    image: vijayhttpd:v1 
     build: 
       context: . #location of dockerfile 
       dockerfile: httpd.dockerfile # name of dockerfile 
-    container_name: ashuc2 
+    container_name: vijaycnt2 
     ports:
-      - 1234:80  
+      - 3001:80  
   
